@@ -26,24 +26,39 @@ class Result extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        children: <Widget>[
-          Text(
-            resultStatus,
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.w500,
-              color: Theme.of(context).primaryColor,
+    return Container(
+      color: null,
+      padding: const EdgeInsets.only(top: 20.0),
+      height: 400.00,
+      child: Center(
+        child: Card(
+          elevation: 5,
+          child: Container(
+            color: null,
+            padding: const EdgeInsets.symmetric(vertical: 26.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Expanded(
+                  child: Text(
+                    resultStatus,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+                const Divider(height: 30.0),
+                OutlinedButton(
+                  onPressed: action,
+                  child: const Text('Retake Quiz!'),
+                ),
+              ],
             ),
-            textAlign: TextAlign.center,
           ),
-          const Divider(height: 30.0),
-          OutlinedButton(
-            onPressed: action,
-            child: const Text('Retake Quiz!'),
-          ),
-        ],
+        ),
       ),
     );
   }
