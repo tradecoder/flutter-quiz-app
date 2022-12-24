@@ -12,16 +12,19 @@ class Answer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.only(bottom: 8.0),
-      color: null,
-      width: double.infinity,
-      child: OutlinedButton(
-        style: OutlinedButton.styleFrom(
-          padding: const EdgeInsets.all(14.0),
+    return Card(
+      child: Container(
+        padding: const EdgeInsets.only(bottom: 3.0, right: 3.0),
+        width: 300,
+        child: OutlinedButton(
+          style: OutlinedButton.styleFrom(
+            elevation: 3,
+            padding: const EdgeInsets.all(14.0),
+            backgroundColor: const Color.fromARGB(124, 97, 241, 229),
+          ),
+          onPressed: actionOnSelectAnswer,
+          child: Text(answerOptions),
         ),
-        onPressed: actionOnSelectAnswer,
-        child: Text(answerOptions),
       ),
     );
   }

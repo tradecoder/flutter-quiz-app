@@ -51,9 +51,16 @@ class Result extends StatelessWidget {
                   ),
                 ),
                 const Divider(height: 30.0),
-                OutlinedButton(
-                  onPressed: action,
-                  child: const Text('Retake Quiz!'),
+                Card(
+                  child: OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                      padding: const EdgeInsets.all(12.0),
+                      elevation: 3,
+                      backgroundColor: const Color.fromARGB(124, 97, 241, 229),
+                    ),
+                    onPressed: action,
+                    child: const Text('Retake Quiz!'),
+                  ),
                 ),
               ],
             ),
