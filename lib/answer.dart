@@ -16,11 +16,10 @@ class Answer extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.only(bottom: 3.0, right: 3.0),
         width: 300,
-        child: OutlinedButton(
-          style: OutlinedButton.styleFrom(
+        child: ElevatedButton(
+          style: ElevatedButton.styleFrom(
             elevation: 3,
             padding: const EdgeInsets.all(14.0),
-            backgroundColor: const Color.fromARGB(124, 97, 241, 229),
           ),
           onPressed: actionOnSelectAnswer,
           child: Text(answerOptions),

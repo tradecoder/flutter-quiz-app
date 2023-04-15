@@ -21,9 +21,9 @@ class DataSet {
     {
       'questionText': 'Who\'s your favorite instructor?',
       'answers': [
-        {'text': 'My Parents', 'score': 3},
-        {'text': 'TradeCoder', 'score': 10},
-        {'text': 'Youtube', 'score': 7},
+        {'text': 'My Parents', 'score': 8},
+        {'text': 'Mamun Abdullah', 'score': 10},
+        {'text': 'Youtube', 'score': 9},
         {'text': 'Others', 'score': 1},
       ],
     },
