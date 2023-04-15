@@ -29,29 +29,31 @@ class Result extends StatelessWidget {
     return Container(
       color: null,
       padding: const EdgeInsets.only(top: 20.0),
-      height: 400.00,
+      height: 400,
       child: Center(
         child: Card(
-          elevation: 5,
+          elevation: 6,
+          shape: const CircleBorder(),
           child: Container(
             color: null,
             padding: const EdgeInsets.symmetric(vertical: 26.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Expanded(
-                  child: Text(
-                    resultStatus,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                      color: Theme.of(context).primaryColor,
-                    ),
-                    textAlign: TextAlign.center,
+                Text(
+                  resultStatus,
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.black,
                   ),
+                  textAlign: TextAlign.center,
                 ),
                 const Divider(height: 30.0),
-                Card(
+                Container(
+                  color: null,
+                  height: 45,
+                  width: 120,
                   child: ElevatedButton(
                     onPressed: action,
                     child: const Text('Retake Quiz!'),

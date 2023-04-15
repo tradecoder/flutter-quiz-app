@@ -20,7 +20,7 @@ class Quiz extends StatelessWidget {
       children: [
         Question(questionText: questions[questionIndex]['questionText']),
         const SizedBox(
-          height: 25.0,
+          height: 30.0,
         ),
         ...(questions[questionIndex]['answers'] as List<Map<String, dynamic>>)
             .map((answer) {

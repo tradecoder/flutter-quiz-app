@@ -13,8 +13,9 @@ class Answer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 5,
       child: Container(
-        padding: const EdgeInsets.only(bottom: 3.0, right: 3.0),
+        padding: const EdgeInsets.only(bottom: 8.0, right: 3.0),
         width: 300,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
@@ -22,7 +23,10 @@ class Answer extends StatelessWidget {
             padding: const EdgeInsets.all(14.0),
           ),
           onPressed: actionOnSelectAnswer,
-          child: Text(answerOptions),
+          child: Text(
+            answerOptions,
+            style: const TextStyle(fontSize: 16),
+          ),
         ),
       ),
     );
