@@ -19,13 +19,13 @@ class Answer extends StatelessWidget {
         width: 300,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            elevation: 3,
-            padding: const EdgeInsets.all(14.0),
-          ),
+              elevation: 3,
+              padding: const EdgeInsets.all(14.0),
+              alignment: Alignment.centerLeft),
           onPressed: actionOnSelectAnswer,
           child: Text(
             answerOptions,
-            style: const TextStyle(fontSize: 16),
+            style: const TextStyle(fontSize: 15),
           ),
         ),
       ),

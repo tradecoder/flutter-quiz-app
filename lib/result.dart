@@ -12,16 +12,20 @@ class Result extends StatelessWidget {
 
   String get resultStatus {
     String status;
-    if (score <= 15) {
-      status = 'Not so good! Your score is $score. Try again!';
-    } else if (score <= 20) {
-      status = 'Awesome! Your score is $score';
-    } else if (score > 20) {
-      status = 'Superb! Your score is $score';
+    if (score <= 50) {
+      status = 'Try again!';
+    } else if (score <= 70) {
+      status = 'Awesome!';
+    } else if (score > 80) {
+      status = 'Superb!';
     } else {
-      status = 'Your score is $score. Try again?';
+      status = '';
     }
     return status;
+  }
+
+  String get showScore {
+    return 'Your score is $score';
   }
 
   @override
@@ -42,13 +46,24 @@ class Result extends StatelessWidget {
               children: <Widget>[
                 Text(
                   resultStatus,
-                  style: const TextStyle(
-                    fontSize: 20,
+                  style: TextStyle(
+                    fontSize: 32,
                     fontWeight: FontWeight.w500,
-                    color: Colors.black,
+                    color: score <= 50 ? Colors.red : Colors.blue,
                   ),
                   textAlign: TextAlign.center,
                 ),
+                const SizedBox(height: 10),
+                Text(
+                  showScore,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.black,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                Text(score <= 50 ? 'You need more development' : ''),
                 const Divider(height: 30.0),
                 Container(
                   color: null,
