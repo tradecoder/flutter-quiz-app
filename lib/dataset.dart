@@ -16,7 +16,7 @@ class DataSet {
           'score': 0,
         },
         {
-          'text': 'd) A desktop application development framework',
+          'text': 'd) None of the above',
           'score': 0,
         },
       ],

@@ -18,6 +18,12 @@ class Quiz extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        Container(
+          alignment: Alignment.centerRight,
+          padding: const EdgeInsets.only(right: 20),
+          child: Text('${questionIndex + 1}/${questions.length}'),
+        ),
+        const SizedBox(height: 10),
         Question(questionText: questions[questionIndex]['questionText']),
         const SizedBox(
           height: 20.0,
@@ -30,7 +36,7 @@ class Quiz extends StatelessWidget {
             actionOnSelectAnswer: () =>
                 actionOnAnswerAndCollectScore(answer['score']),
           );
-        }).toList()
+        }).toList(),
       ],
     );
   }
